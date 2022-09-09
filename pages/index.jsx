@@ -1,26 +1,18 @@
-import Head from 'next/head'
 import Link from 'next/link'
-import styles from '../styles/Home.module.css'
+import { MainLayout } from '../components/layouts/MainLayout'
 
 export default function HomePage() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Home - Elis</title>
-        <meta name="description" content="Home page with Next JS" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
+    <MainLayout>
+        <h1>Home Page</h1>
+        <h1 className={'title'}>
           Go to <Link href="/about">About</Link>
         </h1>
 
-        <p className={styles.description}>
+        <p className={'description'}>
           Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+          <code className={'code'}>pages/index.jsx</code>
         </p>
-      </main>
-    </div>
+    </MainLayout>
   )
 }
